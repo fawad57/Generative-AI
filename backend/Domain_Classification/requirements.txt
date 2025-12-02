@@ -1,0 +1,9 @@
+Flask
+flask-cors
+pandas
+joblib
+scikit-learn
+requests
+pandas
+joblib
+scikit-learn
