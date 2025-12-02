@@ -1,0 +1,250 @@
+.dashboard-container {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #F9FAFB, #FFFFFF);
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.shifted {
+  margin-left: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-toggle {
+  font-size: 20px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-profile svg {
+  font-size: 24px;
+  color: #374151;
+}
+
+.user-profile span {
+  font-size: 16px;
+  color: #1A1A1A;
+}
+
+.badge {
+  background-color: #d1d5dc;
+  color: #FFFFFF;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.dashboard-header {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.top-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.mood-emoji {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  flex-grow: 1;
+  min-height: 120px;
+}
+
+.large-chart {
+  min-height: 250px;
+}
+
+.middle-section {
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-controls button {
+  padding: 8px 16px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.chart-controls button.active {
+  background-color: #3B82F6;
+  color: #FFFFFF;
+  border-color: #3B82F6;
+}
+
+.date-filter {
+  padding: 8px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.right-sidebar {
+  width: 200px;
+  /* Removed absolute positioning */
+  margin-left: auto; /* Pushes it to the right */
+  margin-top: 10px; /* Adds space from the top */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between widgets */
+}
+
+.widget-card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widget-card h3 {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.bottom-section {
+  margin-top: 20px;
+}
+
+.mood-timeline {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.mood-item {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-content.shifted {
+    margin-left: 250px;
+  }
+
+  .top-cards {
+    flex-direction: column;
+  }
+
+  .right-sidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .card, .widget-card {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .large-chart {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    font-size: 24px;
+  }
+
+  .card, .widget-card {
+    padding: 15px;
+    min-width: 200px;
+  }
+
+  .mood-emoji {
+    font-size: 30px;
+  }
+
+  .right-sidebar .widget-card {
+    margin-bottom: 15px;
+  }
+}

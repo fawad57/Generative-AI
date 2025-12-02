@@ -1,0 +1,5 @@
+pandas
+tldextract
+requests
+flask
+flask-cors
